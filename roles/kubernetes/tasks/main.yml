@@ -7,6 +7,12 @@
     mode: 0644
   tags: add_kubernetes_repo
 
+- name: Install prerequisite packages
+  yum:
+    name:
+      - ebtables
+    state: latest
+
 - name: Install Kubernetes packages
   yum:
     name:
